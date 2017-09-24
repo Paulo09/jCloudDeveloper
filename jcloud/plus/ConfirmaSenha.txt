@@ -1,0 +1,19 @@
+if(!params.senha.equals(params.confirmaSenha))
+			{
+			 flash.message = "Senhas estão diferentes, favor redigite senhas..."
+			 redirect(action:create,id:usuario.id)
+			}
+			else
+			{
+				if(!usuario.hasErrors() && usuario.save() && params.senha.equals(params.confirmaSenha))
+				{
+		            flash.message = "Usuario ${usuario.id} created"
+		            redirect(action:show,id:usuario.id)
+		        }
+		        else 
+				{
+		           render(view:'create',model:[usuario:usuario])
+		        }
+			}
+			
+[plano: Plano.get(params.id)]			

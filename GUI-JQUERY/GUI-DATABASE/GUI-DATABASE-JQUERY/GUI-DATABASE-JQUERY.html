@@ -1,0 +1,110 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Page</title>
+<meta name="generator" content="WYSIWYG Web Builder 11 Trial Version - http://www.wysiwygwebbuilder.com">
+<link href="cupertino/jquery-ui.min.css" rel="stylesheet">
+<link href="font-awesome.min.css" rel="stylesheet">
+<link href="GUI-DATABASE-JQUERY.css" rel="stylesheet">
+<link href="GUI-DATABASE-JQUERY.css" rel="stylesheet">
+<script src="jquery-1.11.3.min.js"></script>
+<script src="jquery.ui.core.min.js"></script>
+<script src="jquery.ui.widget.min.js"></script>
+<script src="jquery.ui.mouse.min.js"></script>
+<script src="jquery.ui.button.min.js"></script>
+<script src="jquery.ui.draggable.min.js"></script>
+<script src="jquery.ui.position.min.js"></script>
+<script src="jquery.ui.resizable.min.js"></script>
+<script src="jquery.ui.dialog.min.js"></script>
+<script>
+function showDialog(url, title)
+{
+   $('#PhotoGallery1_dialog').dialog('open');
+   $('#PhotoGallery1_dialog').empty();
+   $('#PhotoGallery1_dialog').dialog('option', 'title', title);
+   var html = '<span><img src="' + url + '"><\/span>';
+   $('#PhotoGallery1_dialog').html(html);
+}
+</script>
+<script>
+$(document).ready(function()
+{
+   var jQueryDialog2Options =
+   {
+      width: 351,
+      height: 382,
+      position: { my: 'left top', at: 'left+1091 top+11', of: window },
+      resizable: false,
+      draggable: false,
+      closeOnEscape: false,
+      autoOpen: true,
+      dialogClass: 'jQueryDialog2'
+   };
+   $("#jQueryDialog2").dialog(jQueryDialog2Options);
+   $("#PhotoGallery1_dialog").dialog(
+   {
+      modal: true,
+      width: 400,
+      height: 300,
+      position: { my: 'center', at: 'center', of: window },
+      resizable: true,
+      draggable: true,
+      closeOnEscape: true,
+      autoOpen: false
+   });
+   var jQueryDialog1Options =
+   {
+      width: 429,
+      height: 774,
+      position: { my: 'left top', at: 'left+600 top+0', of: window },
+      resizable: true,
+      draggable: false,
+      closeOnEscape: false,
+      autoOpen: true,
+      dialogClass: 'jQueryDialog1'
+   };
+   $("#jQueryDialog1").dialog(jQueryDialog1Options);
+});
+</script>
+</head>
+<body>
+<a href="http://www.wysiwygwebbuilder.com" target="_blank"><img src="images/builtwithwwb11.png" alt="WYSIWYG Web Builder" style="position:absolute;left:441px;top:967px;border-width:0;z-index:250"></a>
+<div id="jQueryDialog2" style="z-index:4;" title="Toolbox Database">
+<div id="wb_PhotoGallery1" style="position:absolute;left:33px;top:43px;width:283px;height:258px;z-index:0;">
+<div id="PhotoGallery1">
+   <div class="thumbnails">
+      <div class="thumbnail">
+         <a href="images/img0003.png" onclick="showDialog('images/img0003.png', 'img0003'); return false;"><img alt="img0003" src="images/tn_img0003.png" title="img0003"></a>
+      </div>
+      <div class="thumbnail">
+         <a href="images/img0004.png" onclick="showDialog('images/img0004.png', 'img0004'); return false;"><img alt="img0004" src="images/tn_img0004.png" title="img0004"></a>
+      </div>
+      <div class="thumbnail">
+         <a href="images/img0005.png" onclick="showDialog('images/img0005.png', 'img0005'); return false;"><img alt="img0005" src="images/tn_img0005.png" title="img0005"></a>
+      </div>
+      <div class="clearfix visible-col3"></div>
+      <div class="thumbnail">
+         <a href="images/img0006.png" onclick="showDialog('images/img0006.png', 'img0006'); return false;"><img alt="img0006" src="images/tn_img0006.png" title="img0006"></a>
+      </div>
+      <div class="clearfix visible-col3"></div>
+   </div>
+</div>
+<div id="PhotoGallery1_dialog" title="Photo Gallery"></div></div>
+</div>
+
+<div id="wb_Text2" style="position:absolute;left:50px;top:89px;width:124px;height:19px;z-index:5;text-align:left;">
+<span style="color:#FF0000;font-family:'Times New Roman';font-size:16px;"><em>* </em></span><span style="color:#2779B8;font-family:'Times New Roman';font-size:16px;"><em>Nome Database</em></span></div>
+<input type="text" id="Editbox2" style="position:absolute;left:50px;top:113px;width:331px;height:18px;line-height:18px;z-index:6;" name="Editbox1" value="">
+<input type="submit" id="Button1" name="" value="Salvar" style="position:absolute;left:50px;top:150px;width:68px;height:25px;z-index:7;">
+<div id="wb_Text1" style="position:absolute;left:50px;top:25px;width:440px;height:41px;z-index:8;text-align:left;">
+<span style="color:#2779B8;font-family:'Times New Roman';font-size:35px;"><em>Gerar Database da Aplicação</em></span></div>
+<div id="jQueryDialog1" style="z-index:9;" title="Dados Configura&#231;&#227;o do Data Source">
+<div id="wb_FontAwesomeIcon1" style="position:absolute;left:185px;top:312px;width:57px;height:64px;text-align:center;z-index:1;">
+<div id="FontAwesomeIcon1"><i class="fa fa-plus">&nbsp;</i></div></div>
+<div id="wb_Text3" style="position:absolute;left:94px;top:376px;width:239px;height:31px;z-index:2;text-align:left;">
+<span style="color:#33495F;font-family:'Times New Roman';font-size:27px;"><em>Adicionar Database</em></span></div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,9 @@
+<tr class='prop'>
+							<td valign='top' class='name'>
+							<label for='cliente'>State:</label>
+							</td>
+							<td valign='top' class='value'>
+							<g:select name='state' from='${grailsApplication.controllerClasses.name}'>
+							</g:select>
+							</td>
+							</tr>
